@@ -1,0 +1,1344 @@
+<!doctype html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Candidature Clan Yome — Shinrei Yome</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+
+  <style>
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --red: #ff1a1a;
+      --red-dark: #700000;
+      --red-deep: #3d0000;
+      --red-bright: #ff3333;
+      --red-glow: rgba(255, 0, 0, 0.65);
+
+      --black: #050505;
+      --black-light: #0b0b0b;
+      --dark: #111111;
+      --dark-red: #170505;
+
+      --white: #f5f0e8;
+      --gray: #bdbdbd;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'IM Fell English', Georgia, serif;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.55;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+
+      background:
+        radial-gradient(
+          circle at 50% 50%,
+          rgba(255, 0, 0, 0.025),
+          transparent 65%
+        );
+    }
+
+    .slide {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 40px;
+      overflow: hidden;
+      border-bottom: 1px solid #250000;
+    }
+
+    .slide-cover {
+      background:
+        radial-gradient(
+          ellipse at 50% 40%,
+          rgba(110, 0, 0, 0.35) 0%,
+          rgba(20, 0, 0, 0.85) 45%,
+          #030303 85%
+        ),
+        linear-gradient(
+          135deg,
+          #160000 0%,
+          #050505 50%,
+          #120000 100%
+        );
+
+      text-align: center;
+      gap: 20px;
+    }
+
+    .slide-cover::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+
+      background:
+        radial-gradient(
+          circle at 30% 70%,
+          rgba(255, 0, 0, 0.12) 0%,
+          transparent 45%
+        ),
+        radial-gradient(
+          circle at 70% 30%,
+          rgba(180, 0, 0, 0.12) 0%,
+          transparent 45%
+        );
+    }
+
+    .fuma-star {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      margin: 0 auto 30px;
+      animation: pulse 3s ease-in-out infinite;
+
+      filter:
+        drop-shadow(0 0 20px rgba(255, 0, 0, 0.55))
+        drop-shadow(0 0 45px rgba(120, 0, 0, 0.5));
+
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        filter:
+          drop-shadow(0 0 20px rgba(255, 0, 0, 0.55))
+          drop-shadow(0 0 45px rgba(120, 0, 0, 0.5));
+      }
+
+      50% {
+        filter:
+          drop-shadow(0 0 35px rgba(255, 0, 0, 0.9))
+          drop-shadow(0 0 75px rgba(150, 0, 0, 0.7));
+      }
+
+    }
+
+    .cover-clan {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      color: var(--red-bright);
+
+      text-shadow:
+        0 0 15px rgba(255, 0, 0, 0.7),
+        0 0 40px rgba(150, 0, 0, 0.6);
+
+      position: relative;
+      z-index: 1;
+      line-height: 1.2;
+    }
+
+    .cover-sub {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(0.9rem, 2vw, 1.2rem);
+      letter-spacing: 0.4em;
+      color: #ff5555;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+      margin-top: 10px;
+
+      text-shadow:
+        0 0 15px rgba(255, 0, 0, 0.4);
+    }
+
+    .cover-divider {
+      width: 220px;
+      height: 2px;
+
+      background: linear-gradient(
+        to right,
+        transparent,
+        var(--red),
+        #ff5555,
+        var(--red),
+        transparent
+      );
+
+      box-shadow:
+        0 0 15px rgba(255, 0, 0, 0.65);
+
+      margin: 20px auto;
+
+      position: relative;
+      z-index: 1;
+    }
+
+    .slide-hrp {
+      background:
+        radial-gradient(
+          ellipse at 15% 50%,
+          rgba(100, 0, 0, 0.2),
+          transparent 50%
+        ),
+        linear-gradient(
+          135deg,
+          #120000,
+          #070707 55%,
+          #0d0000
+        );
+
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .slide-hrp::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--red-dark),
+        var(--red),
+        #ff3333,
+        var(--red),
+        var(--red-dark),
+        transparent
+      );
+
+      box-shadow:
+        0 0 20px rgba(255, 0, 0, 0.7);
+    }
+
+    .slide-rp {
+      background:
+        radial-gradient(
+          ellipse at center,
+          rgba(100, 0, 0, 0.2) 0%,
+          transparent 65%
+        ),
+        #080808;
+    }
+
+    .slide-rp::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+
+      background:
+        radial-gradient(
+          ellipse at center,
+          rgba(255, 0, 0, 0.055) 0%,
+          transparent 70%
+        );
+    }
+
+    .slide-bg {
+      background:
+        radial-gradient(
+          ellipse at 80% 20%,
+          rgba(110, 0, 0, 0.18),
+          transparent 45%
+        ),
+        linear-gradient(
+          135deg,
+          #0d0000,
+          #070707 55%,
+          #120000
+        );
+
+      align-items: flex-start;
+    }
+
+    .slide-end {
+      background:
+        radial-gradient(
+          ellipse at 50% 60%,
+          rgba(120, 0, 0, 0.4) 0%,
+          rgba(30, 0, 0, 0.75) 40%,
+          #030303 80%
+        );
+
+      text-align: center;
+      gap: 30px;
+    }
+
+    .section-title {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--red-bright);
+      letter-spacing: 0.05em;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 30px;
+
+      text-shadow:
+        0 0 12px rgba(255, 0, 0, 0.65),
+        0 0 30px rgba(130, 0, 0, 0.45);
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 2px;
+
+      background: linear-gradient(
+        to right,
+        var(--red),
+        #ff3333,
+        transparent
+      );
+
+      box-shadow:
+        0 0 10px rgba(255, 0, 0, 0.55);
+
+      margin-top: 10px;
+    }
+
+    .hrp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      width: 100%;
+      max-width: 900px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hrp-item {
+      padding: 20px 24px;
+      border: 1px solid #300000;
+      border-left: 3px solid var(--red);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 0, 0, 0.035),
+          rgba(0, 0, 0, 0.35)
+        );
+
+      border-radius: 2px;
+
+      box-shadow:
+        inset 0 0 20px rgba(100, 0, 0, 0.06),
+        0 0 15px rgba(0, 0, 0, 0.3);
+
+      transition: all 0.3s ease;
+    }
+
+    .hrp-item:hover {
+      border-left-color: #ff3333;
+
+      box-shadow:
+        inset 0 0 25px rgba(150, 0, 0, 0.1),
+        0 0 20px rgba(120, 0, 0, 0.2);
+
+      transform: translateX(3px);
+    }
+
+    .hrp-label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      color: var(--red-bright);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+
+      text-shadow:
+        0 0 10px rgba(255, 0, 0, 0.45);
+    }
+
+    .hrp-value {
+      font-size: 1.1rem;
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    .hrp-item.full {
+      grid-column: 1 / -1;
+    }
+
+    .rp-layout {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 40px;
+      width: 100%;
+      max-width: 1100px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .rp-left,
+    .rp-right {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .rp-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .rp-center img {
+      width: 160px;
+      height: 160px;
+      object-fit: contain;
+
+      filter:
+        drop-shadow(0 0 20px rgba(255, 0, 0, 0.7))
+        drop-shadow(0 0 45px rgba(100, 0, 0, 0.6));
+    }
+
+    .rp-name {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      font-weight: 900;
+      color: var(--white);
+      text-align: center;
+
+      text-shadow:
+        0 0 15px rgba(255, 0, 0, 0.6),
+        0 0 35px rgba(100, 0, 0, 0.4);
+
+      line-height: 1.3;
+    }
+
+    .info-block {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 0, 0, 0.035),
+          rgba(0, 0, 0, 0.35)
+        );
+
+      border: 1px solid #300000;
+      border-top: 2px solid var(--red);
+      padding: 16px 20px;
+      border-radius: 2px;
+
+      box-shadow:
+        inset 0 0 15px rgba(100, 0, 0, 0.05),
+        0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .info-block-title {
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      color: var(--red-bright);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+
+      text-shadow:
+        0 0 10px rgba(255, 0, 0, 0.45);
+    }
+
+    .info-block-content {
+      font-size: 0.95rem;
+      color: var(--white);
+      line-height: 1.7;
+    }
+
+    .obj-card {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255, 0, 0, 0.035),
+          rgba(0, 0, 0, 0.4)
+        );
+
+      border: 1px solid #300000;
+      border-bottom: 2px solid var(--red);
+      padding: 20px;
+      border-radius: 2px;
+
+      box-shadow:
+        inset 0 0 20px rgba(100, 0, 0, 0.05),
+        0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .obj-card-title {
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      color: var(--red-bright);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+
+      text-shadow:
+        0 0 10px rgba(255, 0, 0, 0.4);
+    }
+
+    .obj-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .obj-card ul li {
+      font-size: 0.9rem;
+      color: #ccc;
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .obj-card ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--red);
+
+      text-shadow:
+        0 0 8px rgba(255, 0, 0, 0.5);
+    }
+
+    .bg-text {
+      max-width: 860px;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .bg-paragraph {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      color: #ccc;
+      margin-bottom: 24px;
+      padding-left: 24px;
+      border-left: 2px solid #300000;
+    }
+
+    .bg-paragraph:first-of-type {
+      font-size: 1.15rem;
+      color: var(--white);
+      border-left-color: var(--red);
+
+      text-shadow:
+        0 0 10px rgba(255, 0, 0, 0.08);
+    }
+
+    .end-text {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      color: var(--white);
+      letter-spacing: 0.05em;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+
+      text-shadow:
+        0 0 15px rgba(255, 0, 0, 0.5),
+        0 0 30px rgba(100, 0, 0, 0.4);
+
+      white-space: pre-line;
+    }
+
+    .end-sub {
+      font-family: 'Cinzel', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.4em;
+      color: var(--red-bright);
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+      margin-top: 10px;
+
+      text-shadow:
+        0 0 12px rgba(255, 0, 0, 0.5);
+    }
+
+    .nav-dots {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 100;
+    }
+
+    .nav-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #333;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .nav-dot:hover {
+      background: #770000;
+
+      box-shadow:
+        0 0 8px rgba(255, 0, 0, 0.5);
+    }
+
+    .nav-dot.active {
+      background: var(--red);
+
+      box-shadow:
+        0 0 8px rgba(255, 0, 0, 0.9),
+        0 0 18px rgba(150, 0, 0, 0.6);
+
+      transform: scale(1.25);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .fade-in:nth-child(2) {
+      animation-delay: 0.25s;
+    }
+
+    .fade-in:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    .fade-in:nth-child(4) {
+      animation-delay: 0.55s;
+    }
+
+    .fade-in:nth-child(5) {
+      animation-delay: 0.7s;
+    }
+
+    .kanji-deco {
+      position: absolute;
+      font-size: 8rem;
+      color: rgba(255, 0, 0, 0.045);
+      font-family: serif;
+      user-select: none;
+      pointer-events: none;
+
+      text-shadow:
+        0 0 30px rgba(120, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+
+      .slide {
+        padding: 50px 20px;
+      }
+
+      .rp-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .rp-center {
+        order: -1;
+      }
+
+      .hrp-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .kanji-deco {
+        font-size: 4rem;
+      }
+
+      .nav-dots {
+        right: 10px;
+      }
+
+    }
+
+    @media print {
+
+      .nav-dots {
+        display: none;
+      }
+
+      .slide {
+        page-break-after: always;
+        min-height: auto;
+        padding: 40px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <nav class="nav-dots" aria-label="Navigation">
+
+    <div
+      class="nav-dot active"
+      onclick="scrollToSlide(0)"
+      title="Accueil">
+    </div>
+
+    <div
+      class="nav-dot"
+      onclick="scrollToSlide(1)"
+      title="Présentation HRP">
+    </div>
+
+    <div
+      class="nav-dot"
+      onclick="scrollToSlide(2)"
+      title="Présentation RP">
+    </div>
+
+    <div
+      class="nav-dot"
+      onclick="scrollToSlide(3)"
+      title="Background">
+    </div>
+
+    <div
+      class="nav-dot"
+      onclick="scrollToSlide(4)"
+      title="Enfance">
+    </div>
+
+    <div
+      class="nav-dot"
+      onclick="scrollToSlide(5)"
+      title="Fin">
+    </div>
+
+  </nav>
+
+  <section
+    class="slide slide-cover"
+    id="slide-0">
+
+    <span
+      class="kanji-deco"
+      style="
+        top: 10%;
+        left: 5%;
+        font-size: 128px;
+      ">
+      風
+    </span>
+
+    <span
+      class="kanji-deco"
+      style="
+        bottom: 10%;
+        right: 5%;
+        font-size: 128px;
+      ">
+      魔
+    </span>
+
+    <img
+      loading="eager"
+      class="fuma-star fade-in"
+      src="Images/yome.png"
+      alt="Logo Yome">
+
+    <h1 class="cover-clan fade-in">
+      Clan Yome
+    </h1>
+
+    <p class="cover-sub fade-in">
+      CANDIDATURE · YOME
+    </p>
+
+    <div class="cover-divider fade-in"></div>
+
+    <p
+      class="cover-sub fade-in"
+      style="
+        font-size: 16px;
+        letter-spacing: 0.2em;
+        color: #f5f0e8;
+      ">
+      SHINREI YOME
+    </p>
+
+  </section>
+
+  <section
+    class="slide slide-hrp"
+    id="slide-1">
+
+    <span
+      class="kanji-deco"
+      style="
+        bottom: 5%;
+        right: 3%;
+        font-size: 128px;
+      ">
+      忍
+    </span>
+
+    <h2 class="section-title fade-in">
+      Présentation HRP
+    </h2>
+
+    <div class="hrp-grid">
+
+      <div class="hrp-item fade-in">
+
+        <div class="hrp-label">
+          Situation familiale
+        </div>
+
+        <div class="hrp-value">
+          Shinrei a été élevé uniquement par sa mère, loin de Suna, dans une habitation isolée au milieu des dunes. Sa mère n'a jamais réellement adhéré aux idéaux et au fonctionnement de Suna. Elle a donc choisi de vivre recluse dans les dunes et d'élever son fils à l'écart du village, tout en lui transmettant ses connaissances et son histoire.
+        </div>
+
+      </div>
+
+      <div class="hrp-item fade-in">
+
+        <div class="hrp-label">
+          Son père
+        </div>
+
+        <div class="hrp-value">
+          Shinrei n'a jamais réellement connu son père. Il a donc grandi principalement auprès de sa mère, qui représentait sa seule véritable famille et lui a appris à avancer malgré les difficultés.
+        </div>
+
+      </div>
+
+      <div class="hrp-item fade-in">
+
+        <div class="hrp-label">
+          Âge
+        </div>
+
+        <div class="hrp-value">
+          17 ans
+        </div>
+
+      </div>
+
+      <div class="hrp-item full fade-in">
+
+        <div class="hrp-label">
+          Expérience RP
+        </div>
+
+        <div class="hrp-value">
+          J'ai déjà incarné plusieurs personnages appartenant à différents clans sur d'autres serveurs Naruto RP, ce qui m'a permis de découvrir différentes façons de jouer et de développer un personnage de clan. Je possède également actuellement environ 1400 heures de RP sur Garry's Mod, avec de nombreuses expériences en matière de scènes RP, de missions, d'interactions et de développement de personnages.
+        </div>
+
+      </div>
+
+      <div class="hrp-item full fade-in">
+
+        <div class="hrp-label">
+          Pourquoi Yome ?
+        </div>
+
+        <div class="hrp-value">
+          Je souhaite faire un personnage appartenant au Clan Yome sur votre serveur parce que j'ai pu voir, grâce aux spoilers et aux anciennes versions, que c'est un bon serveur et que le clan possède un très bon potentiel RP. Le concept du clan et ses possibilités autour des fléaux offrent également de nombreuses possibilités pour développer un personnage et créer des scènes intéressantes.
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section
+    class="slide slide-rp"
+    id="slide-2">
+
+    <span
+      class="kanji-deco"
+      style="
+        top: 5%;
+        right: 5%;
+        font-size: 128px;
+      ">
+      剣
+    </span>
+
+    <span
+      class="kanji-deco"
+      style="
+        bottom: 5%;
+        left: 3%;
+        font-size: 128px;
+      ">
+      術
+    </span>
+
+    <h2
+      class="section-title fade-in"
+      style="
+        text-align: center;
+        width: 100%;
+        max-width: 1100px;
+      ">
+      Présentation RP
+    </h2>
+
+    <div class="rp-layout">
+
+      <div class="rp-left">
+
+        <div class="info-block fade-in">
+
+          <div class="info-block-title">
+            Qualités
+          </div>
+
+          <div class="info-block-content">
+            Gentil · Loyal · Intelligent
+          </div>
+
+        </div>
+
+        <div class="info-block fade-in">
+
+          <div class="info-block-title">
+            Défauts
+          </div>
+
+          <div class="info-block-content">
+            Froid · Fouineur
+          </div>
+
+        </div>
+
+        <div class="info-block fade-in">
+
+          <div class="info-block-title">
+            Nindo
+          </div>
+
+          <div
+            class="info-block-content"
+            style="
+              font-style: italic;
+              color: #ff5555;
+            ">
+            « Loyauté, Force et Honneur »
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="rp-center">
+
+        <img
+          loading="eager"
+          src="Images/yome.png"
+          alt="Logo Yome">
+
+        <div class="rp-name">
+          Shinrei Yome
+        </div>
+
+      </div>
+
+      <div class="rp-right">
+
+        <div class="obj-card fade-in">
+
+          <div class="obj-card-title">
+            Objectifs à court terme
+          </div>
+
+          <ul>
+
+            <li>
+              S'intégrer pleinement à l'académie et apprendre à connaître son fonctionnement ainsi que les personnes qui la composent.
+            </li>
+
+            <li>
+              Rejoindre la section de l'académie afin de participer davantage à la vie de celle-ci et développer son expérience auprès des autres élèves.
+            </li>
+
+            <li>
+              Créer une équipe au sein de l'académie, apprendre à connaître ses membres et développer une véritable cohésion entre eux.
+            </li>
+
+            <li>
+              Faire différentes missions ensemble afin de créer des liens et faire évoluer Shinrei à travers les expériences vécues avec son équipe.
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="obj-card fade-in">
+
+          <div class="obj-card-title">
+            Objectifs à moyen terme
+          </div>
+
+          <ul>
+
+            <li>
+              Organiser dans un premier temps un banquet réservé au Clan Yome afin de renforcer les liens entre ses membres et créer un véritable esprit de famille.
+            </li>
+
+            <li>
+              Organiser plus tard un banquet ouvert à l'ensemble de Suna afin de rassembler les habitants et créer un événement convivial au sein du village.
+            </li>
+
+            <li>
+              Mettre en place un événement de vente sous forme de tombola, avec différents lots et récompenses à gagner afin d'animer le village.
+            </li>
+
+            <li>
+              Continuer à faire évoluer son équipe à travers différentes missions et expériences afin de renforcer leur cohésion et leurs compétences.
+            </li>
+
+            <li>
+              Rejoindre la section scientifique afin d'approfondir ses connaissances et de travailler sur différents projets liés aux techniques, aux capacités des ninjas et aux phénomènes observés dans le monde shinobi.
+            </li>
+
+            <li>
+              Développer un projet scientifique consistant à étudier la combinaison de différentes natures de chakra afin de comprendre comment leurs propriétés peuvent interagir. Shinrei chercherait notamment à créer un dispositif ou un procédé permettant de stabiliser temporairement deux flux de chakra différents pour observer leurs réactions et découvrir de nouvelles applications.
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="obj-card fade-in">
+
+          <div class="obj-card-title">
+            Objectifs à long terme
+          </div>
+
+          <ul>
+
+            <li>
+              Créer un banquet réunissant les Kage de chaque village afin de favoriser les échanges entre les grandes nations et construire des relations plus solides entre les villages.
+            </li>
+
+            <li>
+              Organiser une grande kermesse réunissant Konoha et Suna, durant laquelle différents jeux, activités et épreuves permettraient aux participants de remporter des récompenses.
+            </li>
+
+            <li>
+              Continuer à développer ses connaissances scientifiques et parvenir à mener à terme un projet suffisamment important pour laisser une véritable trace dans le domaine de la recherche ninja.
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section
+    class="slide slide-bg"
+    id="slide-3">
+
+    <span
+      class="kanji-deco"
+      style="
+        top: 5%;
+        right: 5%;
+        font-size: 128px;
+      ">
+      伝
+    </span>
+
+    <h2 class="section-title fade-in">
+      Background RP
+    </h2>
+
+    <div class="bg-text">
+
+      <p class="bg-paragraph fade-in">
+        Son départ pour Suna représente donc une véritable rupture avec son ancienne vie. Pour Shinrei, ce voyage est l'occasion de découvrir le village, de rencontrer de nouvelles personnes et surtout de construire son propre avenir tout en se forgeant une identité qui lui appartient.
+      </p>
+
+      <p class="bg-paragraph fade-in">
+        Très souvent, Shinrei sortait de chez lui pour s'entraîner ou réviser. Élève sérieux et motivé, il aimait aussi faire des combats d'entraînement avec ses amis ainsi que participer à différents jeux avec eux. Malgré son côté studieux, il savait garder un bon esprit d'équipe et profitait pleinement des moments passés avec ses camarades. Il avait également l'habitude de participer à toutes les activités qui se présentaient à lui.
+      </p>
+
+      <p class="bg-paragraph fade-in">
+        Un jour, alors qu'ils étaient en plein repas, sa mère lui annonça qu'il allait devoir partir pour le Japon afin de rejoindre l'école d'exorcisme d'Hokkaido. La nouvelle le bouleversa et le rendit nerveux. Quitter son environnement, ses habitudes et les personnes qu'il connaissait représentait un changement important pour lui. Malgré ses inquiétudes, Shinrei décida d'affronter cette nouvelle étape. Il se promit de donner le meilleur de lui-même, de découvrir le monde de l'exorcisme et de réussir dans ce nouveau domaine qui l'attendait.
+      </p>
+
+    </div>
+
+  </section>
+
+  <section
+    class="slide slide-bg"
+    id="slide-4">
+
+    <span
+      class="kanji-deco"
+      style="
+        top: 5%;
+        left: 3%;
+        font-size: 128px;
+      ">
+      家
+    </span>
+
+    <span
+      class="kanji-deco"
+      style="
+        bottom: 5%;
+        right: 4%;
+        font-size: 128px;
+      ">
+      孤
+    </span>
+
+    <h2 class="section-title fade-in">
+      Enfance &amp; Famille
+    </h2>
+
+    <div class="bg-text">
+
+      <div
+        class="hrp-grid"
+        style="margin-bottom: 28px;">
+
+        <div class="hrp-item fade-in">
+
+          <div class="hrp-label">
+            Situation familiale
+          </div>
+
+          <div class="hrp-value">
+            Shinrei a été élevé uniquement par sa mère. Son enfance a été marquée par une situation familiale difficile et une relation compliquée avec elle, malgré les efforts qu'elle faisait pour s'occuper de lui du mieux possible.
+          </div>
+
+        </div>
+
+        <div class="hrp-item fade-in">
+
+          <div class="hrp-label">
+            Son père
+          </div>
+
+          <div class="hrp-value">
+            Shinrei n'a jamais connu son père. Celui-ci est mort avant qu'il puisse réellement faire partie de sa vie. Shinrei a donc grandi sans figure paternelle et sans réellement savoir qui était son père.
+          </div>
+
+        </div>
+
+      </div>
+
+      <p class="bg-paragraph fade-in">
+        L'enfance de Shinrei n'a jamais été particulièrement simple. L'absence de son père a laissé un vide dans sa vie, puisqu'il n'a jamais eu l'occasion de le connaître ou même de construire un souvenir avec lui. Sa mère a dû l'élever seule et faisait de son mieux malgré leurs difficultés. Cependant, leur relation restait compliquée et Shinrei avait parfois du mal à comprendre certaines de ses décisions.
+      </p>
+
+      <p class="bg-paragraph fade-in">
+        Malgré cette enfance difficile, Shinrei n'a jamais cessé d'avancer. Il a appris à devenir autonome et à compter davantage sur lui-même. Les histoires que sa mère lui racontait sur leur famille et le monde de l'exorcisme étaient parmi les rares moments où ils arrivaient réellement à partager quelque chose. Avec le temps, Shinrei a compris qu'elle faisait simplement de son mieux dans une situation qui n'était facile pour aucun des deux.
+      </p>
+
+      <p class="bg-paragraph fade-in">
+        Son départ pour le Japon représente donc une véritable rupture avec son ancienne vie. Pour Shinrei, ce voyage est l'occasion de repartir de zéro, de découvrir le monde de l'exorcisme et surtout de construire son propre avenir sans rester prisonnier de son passé.
+      </p>
+
+    </div>
+
+  </section>
+
+  <section
+    class="slide slide-end"
+    id="slide-5">
+
+    <span
+      class="kanji-deco"
+      style="
+        top: 15%;
+        left: 5%;
+        font-size: 128px;
+      ">
+      誇
+    </span>
+
+    <span
+      class="kanji-deco"
+      style="
+        bottom: 15%;
+        right: 5%;
+        font-size: 128px;
+      ">
+      栄
+    </span>
+
+    <img
+      loading="eager"
+      width="120"
+      height="120"
+
+      style="
+        object-fit: contain;
+
+        filter:
+          drop-shadow(0 0 25px rgba(255, 0, 0, 0.8))
+          drop-shadow(0 0 55px rgba(120, 0, 0, 0.6));
+
+        margin-bottom: 10px;
+
+        position: relative;
+        z-index: 1;
+      "
+
+      src="Images/yome.png"
+
+      alt="Logo Yome">
+
+    <div class="end-text fade-in">
+
+      Merci d'avoir regardé cette candidature.
+
+      En espérant qu'elle vous ait plu.
+
+    </div>
+
+    <div class="end-sub fade-in">
+      Clan Yome · Loyauté, Force &amp; Honneur
+    </div>
+
+    <div
+      class="cover-divider fade-in"
+      style="margin-top: 30px;">
+    </div>
+
+    <p
+      class="fade-in"
+      style="
+        font-family: Cinzel, serif;
+        font-size: 12px;
+        letter-spacing: 0.3em;
+        color: #555;
+        position: relative;
+        z-index: 1;
+      ">
+      SHINREI YOME - pirate.z4
+    </p>
+
+  </section>
+
+  <script>
+
+    const slides =
+      document.querySelectorAll('.slide');
+
+    const dots =
+      document.querySelectorAll('.nav-dot');
+
+    function scrollToSlide(index) {
+
+      if (slides[index]) {
+
+        slides[index].scrollIntoView({
+          behavior: 'smooth'
+        });
+
+      }
+
+    }
+
+    const observer =
+      new IntersectionObserver(
+
+        (entries) => {
+
+          entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+              const index =
+                [...slides].indexOf(entry.target);
+
+              dots.forEach((dot, i) => {
+
+                dot.classList.toggle(
+                  'active',
+                  i === index
+                );
+
+              });
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: 0.5
+        }
+
+      );
+
+    slides.forEach((slide) => {
+
+      observer.observe(slide);
+
+    });
+
+  </script>
+
+</body>
+
+</html>

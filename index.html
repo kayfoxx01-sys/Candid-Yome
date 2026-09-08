@@ -225,7 +225,8 @@
     .hrp-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      column-gap: 0;
+      row-gap: 20px;
       width: 100%;
       max-width: 900px;
       position: relative;
@@ -238,6 +239,17 @@
       border-left: 3px solid var(--red-dark);
       background: rgba(255,255,255,0.02);
       border-radius: 2px;
+    }
+
+
+    .hrp-grid .identity-card {
+      border-right: 0;
+      border-radius: 2px 0 0 2px;
+    }
+
+    .hrp-grid > .hrp-item:nth-child(2) {
+      border-left: 0;
+      border-radius: 0 2px 2px 0;
     }
 
     .hrp-label {
@@ -257,6 +269,16 @@
 
     .hrp-item.full {
       grid-column: 1 / -1;
+    }
+
+    /* Les cadres Présentation et Expérience RP sont collés */
+    .hrp-grid .identity-card {
+      border-right: 0;
+      border-radius: 2px 0 0 2px;
+    }
+
+    .hrp-grid > .hrp-item:nth-child(2) {
+      border-radius: 0 2px 2px 0;
     }
 
     .rp-layout {
